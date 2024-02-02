@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { useDispatch } from 'react-redux';
 import './App.css';
+import { addToCart} from './redux/action';
 
 function App() {
+  const dispatch = useDispatch()
+
+  const productData = {
+    "Name":"I phone",
+    "Price":1000,
+    "Quantity":2
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <iframe
+    allow="microphone;"
+    width="350"
+    height="430"
+    src="https://console.dialogflow.com/api-client/demo/embedded/a1b55eb7-3c80-46ad-bdd9-1d55b0032d0e">
+</iframe>
+
     </div>
   );
 }
